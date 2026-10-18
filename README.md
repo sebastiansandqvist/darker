@@ -1,9 +1,10 @@
 # Darker
 
-A minimal macOS menu-bar dimmer. Requires macOS 13 or later. Built with SwiftUI and AppKit, with no dependencies.
+A minimal macOS menu-bar dimmer.
 
 ## Build and open
 
+(Requires macOS 13 or later.)
 With Xcode command-line tools installed, run from this folder:
 
 ```sh
@@ -18,7 +19,7 @@ The build creates a locally signed app that launches automatically at login.
 
 ## How it works
 
-Each display gets a borderless, click-through black window that cannot take keyboard focus. These black windows follow Spaces, fullscreen apps, and extra displays.
+This app overlays a click-through black window on every display. These windows follow Spaces, fullscreen apps, and extra displays.
 
 ## Development
 

@@ -2,7 +2,7 @@
 
 A minimal macOS menu-bar dimmer.
 
-## Build and open
+## Build and run
 
 (Requires macOS 13 or later.)
 With Xcode command-line tools installed, run from this folder:
@@ -14,7 +14,7 @@ ditto build/Darker.app "$HOME/Applications/Darker.app"
 open "$HOME/Applications/Darker.app"
 ```
 
-The build creates a locally signed app that launches automatically at login.
+This creates a locally signed app that launches automatically at login.
 
 
 ## How it works

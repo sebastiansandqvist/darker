@@ -2,6 +2,9 @@
 
 A minimal macOS menu-bar dimmer.
 
+<img width="312" height="185" alt="Screenshot 2026-10-18 at 9 42 30 AM" src="https://github.com/user-attachments/assets/2ecf4c03-45b7-4121-94a4-c5f4fbde2a75" />
+
+
 ## Build and run
 
 (Requires macOS 13 or later.)

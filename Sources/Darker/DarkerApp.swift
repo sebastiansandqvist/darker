@@ -110,22 +110,24 @@ struct DimmingView: View {
         VStack(spacing: 0) {
             VStack(spacing: 6) {
                 HStack(spacing: 10) {
-                    Image(systemName: "sun.max")
-                        .accessibilityHidden(true)
-                    Slider(value: Binding(get: { settings.amount }, set: settings.setAmount),
-                           in: 0...DimmingSettings.maximum)
-                        .accessibilityLabel("Dimming")
-                        .accessibilityValue("\(Int(settings.amount.rounded())) percent")
-                        .accessibilityIdentifier("dimmingSlider")
                     Image(systemName: "moon.fill")
+                        .accessibilityHidden(true)
+                    Slider(value: Binding(
+                        get: { DimmingSettings.maximum - settings.amount },
+                        set: { settings.setAmount(DimmingSettings.maximum - $0) }
+                    ), in: 0...DimmingSettings.maximum)
+                        .accessibilityLabel("Brightness")
+                        .accessibilityValue("\(Int(settings.amount.rounded())) percent dimming")
+                        .accessibilityIdentifier("dimmingSlider")
+                    Image(systemName: "sun.max")
                         .accessibilityHidden(true)
                 }
                 .font(.system(size: 13))
                 .foregroundStyle(.secondary)
                 HStack {
-                    Text("Off")
-                    Spacer()
                     Text("Darker")
+                    Spacer()
+                    Text("Brighter")
                 }
                 .font(.system(size: 10))
                 .foregroundStyle(.tertiary)
